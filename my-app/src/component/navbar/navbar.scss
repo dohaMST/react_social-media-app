@@ -1,0 +1,63 @@
+@import "../../app.scss";
+
+.navbar{
+    @include themify($themes){
+
+        // background-color: red;
+        display: flex;
+
+        justify-content: space-between;
+        border: solid 1px themed("border");
+        padding: .9rem 1.8rem;
+        height: 3.2rem;
+        position: sticky;
+        top: 0;
+        background-color: themed("bg");
+        color: themed("textColor");
+        z-index: 99;
+        
+        .left{
+            // background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            gap: 1.9rem;
+            span{
+                font-weight: bold;
+                color: themed("logo");
+            }
+            .search{
+                display: flex;
+                align-items: center;
+                border: 1px solid themed("border");
+                border-radius: .5rem;
+                padding: 5px;
+                input{
+                    border: none;
+                    width: 31rem;
+                    background-color: transparent;
+                    color: themed("textColor");
+
+                }
+            }
+
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: .9rem;
+            font-weight: 500;
+            .user{
+                display: flex;
+                align-items: center;
+                gap: .9rem;
+                img{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                // span{}
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../app.scss";
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+}
+.leftBar{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        flex: 2;
+        position: sticky;
+        top: 51.2px;
+        height: calc(100vh - 51.2px);
+        overflow-y: scroll;
+        
+        &::-webkit-scrollbar{
+            // display: none;
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: gray;
+            border-radius: .7rem;
+        }
+        .container{
+            padding: 1.25rem ;
+            .menu{
+                // background-color: aqua;
+                font-size: .7rem;
+                text-transform: capitalize;
+                display: flex;
+                flex-direction: column;
+                gap: .7rem;
+                .user{
+                    @include flex-center();
+                    gap: .7rem;
+                    // display: flex;
+                    // align-items: center;
+                    img{
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    span{
+                        font-size: .8rem;
+                    }
+                }
+                .item{
+                    @include flex-center();
+                    gap: .7rem;
+                    img{
+                        width: 1.8rem;
+                    }
+                    span{
+                        font-size: .8rem;
+                    }
+                }
+            }
+            hr{
+                border: none;
+                height: 1px;
+                background-color: themed("border");
+                margin: 1.25rem 0;
+            }
+        }
+    }       
+}       

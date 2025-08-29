@@ -1,0 +1,82 @@
+.register{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193,190,255);
+    .card{
+        background-color: white;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+        min-height: 37.5rem;
+        border-radius: .7rem;
+        overflow: hidden;
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)) ,url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
+            background-size: cover;
+            padding: 3.12rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 1.9rem;
+            h1{
+                font-size: 6.25rem;
+                line-height: 6.25rem;
+                text-transform: capitalize;
+            }
+            // p{}
+            span{
+                font-size: .8rem;
+            }
+            button{
+                width: 50%;
+                padding: .9rem;
+                text-transform: capitalize;
+                color: rebeccapurple;
+                cursor: pointer;
+                border-radius: .7rem;
+                border: none;
+                font-weight: bolder;
+                background-color: white;
+
+            }
+        }
+        .right{
+            flex: 1;
+            padding: 3.12rem;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            h1{
+                text-transform: capitalize;
+                color: #555;
+
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                input{
+                    border: none;
+                    border-bottom: 1px lightgray solid;
+                    padding: 1.8rem .9rem;
+                }
+                button{
+                    width: 50%;
+                    padding: .9rem;
+                    text-transform: capitalize;
+                    border: none;
+                    border-radius: .7rem;
+                    font-weight: bolder;
+                    color: white;
+                    background-color: #938eef;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
